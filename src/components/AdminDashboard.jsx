@@ -98,9 +98,10 @@ export default function AdminDashboard() {
         return;
       }
 
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       if (!token) {
         try {
+          sessionStorage.removeItem("token");
           localStorage.removeItem("token");
         } catch {
           // ignore
@@ -123,6 +124,7 @@ export default function AdminDashboard() {
 
       if (res.status === 401 || res.status === 403 || result?.message === "Token inválido") {
         try {
+          sessionStorage.removeItem("token");
           localStorage.removeItem("token");
         } catch {
           // ignore
@@ -157,7 +159,7 @@ export default function AdminDashboard() {
     }));
 
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
       const res = await fetch("/api/admin/usuarios/set-paises", {
@@ -206,7 +208,7 @@ export default function AdminDashboard() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
       const res = await fetch(
@@ -248,7 +250,7 @@ export default function AdminDashboard() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
 
@@ -285,7 +287,7 @@ export default function AdminDashboard() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
       const res = await fetch(
@@ -315,7 +317,7 @@ export default function AdminDashboard() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
       const res = await fetch(
@@ -345,7 +347,7 @@ export default function AdminDashboard() {
 
     setLoading(true);
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
       headers["Authorization"] = `Bearer ${token}`;
       const res = await fetch(
