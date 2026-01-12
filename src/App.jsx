@@ -2991,7 +2991,7 @@ export default function App() {
           </div>
 
           <div className="mt-4 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
-            <div className="text-xs text-slate-300">
+            <div className="text-xs text-[var(--muted)]">
               {introMuted ? "El video arranca en silencio por política del navegador." : "Sonido activado."}
             </div>
 
@@ -3000,7 +3000,7 @@ export default function App() {
                 <button
                   type="button"
                   onClick={startIntroWithSound}
-                  className="px-5 py-3 rounded-2xl bg-white text-slate-900 text-xs font-black border border-slate-200 shadow-sm hover:bg-slate-50"
+                  className="px-5 py-3 rounded-2xl bg-[var(--primary)] text-[#071018] text-xs font-black border border-[rgba(63,209,255,.35)] shadow-sm hover:bg-[var(--primaryHover)]"
                 >
                   Activar sonido
                 </button>
@@ -3017,7 +3017,7 @@ export default function App() {
           </div>
 
           {introNeedsClick ? (
-            <div className="mt-3 text-[11px] text-slate-400">
+            <div className="mt-3 text-[11px] text-[var(--muted)]">
               Tip: si no reproduce, tocá “Activar sonido” o usá los controles del video.
             </div>
           ) : null}
@@ -3031,9 +3031,9 @@ export default function App() {
     return (
       <div className="min-h-screen bg-transparent flex items-center justify-center p-6 font-sans">
         {Toast}
-        <div className="w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-800 p-10">
+        <div className="w-full max-w-3xl bg-[var(--surface)] rounded-3xl shadow-2xl border border-[var(--border)] p-10 text-[var(--text)]">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="bg-white h-[38px] w-[38px] rounded-full border border-slate-200 overflow-hidden shadow-sm flex items-center justify-center">
+            <div className="bg-[rgba(255,255,255,.04)] h-[38px] w-[38px] rounded-full border border-[rgba(255,255,255,.12)] overflow-hidden shadow-sm flex items-center justify-center">
               {brandLogoOk ? (
                 <img
                   src="/cogniseguros-logo.png"
@@ -3047,21 +3047,21 @@ export default function App() {
                 </div>
               )}
             </div>
-            <div className="text-3xl font-black text-slate-900">COGNISEGUROS</div>
+            <div className="text-3xl font-black text-[var(--text)]">COGNISEGUROS</div>
           </div>
 
-          <div className="text-center text-slate-500 mb-10">Seguros inteligentes</div>
+          <div className="text-center text-[var(--muted)] mb-10">Seguros inteligentes</div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <button
               onClick={() => setRootView("aseguradoras")}
-              className="p-8 rounded-3xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-left shadow-sm"
+              className="p-8 rounded-3xl border border-[var(--border)] hover:border-[rgba(63,209,255,.35)] hover:bg-[rgba(255,255,255,.04)] text-left shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <Building2 className="text-[var(--c1)]" />
-                <div className="text-xl font-black text-slate-900">Aseguradoras</div>
+                <div className="text-xl font-black text-[var(--text)]">Aseguradoras</div>
               </div>
-              <div className="mt-2 text-sm text-slate-500">
+              <div className="mt-2 text-sm text-[var(--muted)]">
                 Login, cartera completa, vencimientos, pagos, WhatsApp y marketing IA.
               </div>
             </button>
@@ -3071,13 +3071,13 @@ export default function App() {
                 resetClientPortalState();
                 setRootView("clientes");
               }}
-              className="p-8 rounded-3xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-left shadow-sm"
+              className="p-8 rounded-3xl border border-[var(--border)] hover:border-[rgba(63,209,255,.35)] hover:bg-[rgba(255,255,255,.04)] text-left shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <User className="text-[var(--c3)]" />
-                <div className="text-xl font-black text-slate-900">Clientes</div>
+                <div className="text-xl font-black text-[var(--text)]">Clientes</div>
               </div>
-              <div className="mt-2 text-sm text-slate-500">
+              <div className="mt-2 text-sm text-[var(--muted)]">
                 Ingreso por DNI, ver datos completos, grúa, póliza y asistente IA.
               </div>
             </button>
@@ -3087,39 +3087,39 @@ export default function App() {
                 resetEnterpriseSession();
                 setRootView("enterprise");
               }}
-              className="p-8 rounded-3xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-left shadow-sm"
+              className="p-8 rounded-3xl border border-[var(--border)] hover:border-[rgba(63,209,255,.35)] hover:bg-[rgba(255,255,255,.04)] text-left shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <Share2 className="text-[var(--c2)]" />
-                <div className="text-xl font-black text-slate-900">Enterprise</div>
+                <div className="text-xl font-black text-[var(--text)]">Enterprise</div>
               </div>
-              <div className="mt-2 text-sm text-slate-500">
+              <div className="mt-2 text-sm text-[var(--muted)]">
                 Redes Sociales: guiones de influencer (Hook/Cuerpo/CTA) con login OTP.
               </div>
             </button>
 
             <button
               onClick={() => setRootView("devadmin")}
-              className="p-8 rounded-3xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-left shadow-sm"
+              className="p-8 rounded-3xl border border-[var(--border)] hover:border-[rgba(63,209,255,.35)] hover:bg-[rgba(255,255,255,.04)] text-left shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <Shield className="text-[var(--c1)]" />
-                <div className="text-xl font-black text-slate-900">Admin (Desarrollador)</div>
+                <div className="text-xl font-black text-[var(--text)]">Admin (Desarrollador)</div>
               </div>
-              <div className="mt-2 text-sm text-slate-500">
+              <div className="mt-2 text-sm text-[var(--muted)]">
                 Gestioná licencias y accesos (invitaciones/usuarios) con ADMIN_KEY.
               </div>
             </button>
           </div>
 
           <div className="mt-10 flex items-center justify-between">
-            <div className="text-xs text-slate-400">
+            <div className="text-xs text-[var(--muted)]">
               Backend: {backendHealth?.build_id ? `build ${backendHealth.build_id}` : "sin info"}
               {typeof backendHealth?.db_connected === "boolean" ? ` · db=${backendHealth.db_connected ? "ok" : "off"}` : ""}
             </div>
             <button
               onClick={openSupport}
-              className="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-black hover:bg-black flex items-center gap-2"
+              className="px-4 py-2 rounded-xl bg-[var(--primary)] text-[#071018] text-xs font-black hover:bg-[var(--primaryHover)] flex items-center gap-2"
             >
               <MessageCircle size={16} /> Contactar soporte
             </button>
@@ -3132,7 +3132,7 @@ export default function App() {
   /* ================== ENTERPRISE (REDES SOCIALES) ================== */
   if (rootView === "enterprise") {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center p-6 font-sans">
+      <div className="min-h-screen bg-transparent flex items-center justify-center p-6 font-sans">
         {Toast}
         <BackButton
           show
@@ -3143,25 +3143,25 @@ export default function App() {
         />
 
         {enterpriseMode === "auth" ? (
-          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-10 border border-slate-800">
+          <div className="bg-[var(--surface)] text-[var(--text)] rounded-3xl shadow-2xl w-full max-w-md p-10 border border-[var(--border)]">
             <div className="text-center mb-8">
-              <Share2 className="mx-auto text-blue-600 mb-4" size={52} />
-              <h1 className="text-3xl font-black text-slate-900">Redes Sociales</h1>
-              <p className="text-slate-500 text-sm mt-1">Enterprise</p>
+              <Share2 className="mx-auto text-[var(--primary)] mb-4" size={52} />
+              <h1 className="text-3xl font-black text-[var(--text)]">Redes Sociales</h1>
+              <p className="text-[var(--muted)] text-sm mt-1">Enterprise</p>
             </div>
 
-            <div className="text-[11px] text-slate-500 mb-6">
+            <div className="text-[11px] text-[var(--muted)] mb-6">
               Acceso por código (OTP) enviado al email habilitado. Sin contraseñas.
             </div>
 
             {!enterpriseEmailStep ? (
               <div className="space-y-5">
                 <div className="space-y-2">
-                  <label className="text-xs font-black text-slate-700">Email</label>
+                  <label className="text-xs font-black text-[var(--muted)]">Email</label>
                   <input
                     id="enterpriseEmailInput"
                     type="email"
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl outline-none"
+                    className="w-full px-4 py-3 rounded-xl outline-none bg-[rgba(255,255,255,.04)] border border-[rgba(255,255,255,.12)] text-[var(--text)] placeholder:text-[var(--muted)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -3173,7 +3173,7 @@ export default function App() {
                     enterpriseSendCode({ email });
                   }}
                   disabled={loading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {loading ? <Loader2 className="animate-spin" /> : <Send size={18} />}
                   Enviar código
@@ -3182,7 +3182,7 @@ export default function App() {
             ) : (
               <div className="space-y-5">
                 <div className="text-center">
-                  <p className="text-sm font-black text-slate-700">Ingresa el código de {enterpriseEmailStep}</p>
+                  <p className="text-sm font-black text-[var(--muted)]">Ingresa el código de {enterpriseEmailStep}</p>
                 </div>
 
                 <div className="flex gap-2 justify-center">
@@ -3202,7 +3202,7 @@ export default function App() {
                           document.getElementById(`enterprise-digit-${idx + 1}`)?.focus();
                         }
                       }}
-                      className="w-12 h-12 px-0 py-0 bg-white border-2 border-slate-300 rounded-xl outline-none text-center text-lg font-black text-slate-900"
+                        className="w-12 h-12 px-0 py-0 bg-[rgba(255,255,255,.04)] border-2 border-[rgba(255,255,255,.12)] rounded-xl outline-none text-center text-lg font-black text-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                     />
                   ))}
                 </div>
@@ -3214,7 +3214,7 @@ export default function App() {
                     enterpriseVerifyCode({ email: enterpriseEmailStep, otp: code });
                   }}
                   disabled={loading || enterpriseCodeDigits.join("").length !== 6}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {loading ? <Loader2 className="animate-spin" /> : <Shield size={18} />}
                   Verificar
@@ -3226,7 +3226,7 @@ export default function App() {
                     setEnterpriseEmailStep(null);
                     setEnterpriseCodeDigits(["", "", "", "", "", ""]);
                   }}
-                  className="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-2 rounded-2xl text-sm"
+                  className="w-full bg-[rgba(255,255,255,.06)] hover:bg-[rgba(255,255,255,.09)] text-[var(--text)] font-black py-2 rounded-2xl text-sm border border-[rgba(255,255,255,.12)]"
                 >
                   Cambiar email
                 </button>
@@ -3234,13 +3234,13 @@ export default function App() {
             )}
           </div>
         ) : (
-          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-5xl p-0 border border-slate-800 overflow-hidden">
-            <div className="p-6 border-b border-slate-200 flex items-center justify-between gap-3">
+          <div className="bg-[var(--surface)] text-[var(--text)] rounded-3xl shadow-2xl w-full max-w-5xl p-0 border border-[var(--border)] overflow-hidden">
+            <div className="p-6 border-b border-[var(--line)] flex items-center justify-between gap-3 bg-[rgba(11,18,36,.92)] backdrop-blur">
               <div>
-                <div className="text-xl font-black text-slate-900 flex items-center gap-2">
+                <div className="text-xl font-black text-[var(--text)] flex items-center gap-2">
                   <Share2 size={18} /> Redes Sociales — Enterprise
                 </div>
-                <div className="text-[11px] text-slate-500">
+                <div className="text-[11px] text-[var(--muted)]">
                   {enterpriseUser?.email ? `Sesión: ${enterpriseUser.email}` : ""}
                 </div>
               </div>
@@ -3249,14 +3249,14 @@ export default function App() {
                 <button
                   type="button"
                   onClick={openSupport}
-                  className="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-black hover:bg-black flex items-center gap-2"
+                  className="px-4 py-2 rounded-xl bg-[var(--primary)] text-[#071018] text-xs font-black hover:bg-[var(--primaryHover)] flex items-center gap-2"
                 >
                   <MessageCircle size={16} /> Soporte
                 </button>
                 <button
                   type="button"
                   onClick={resetEnterpriseSession}
-                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center gap-2"
+                  className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,.04)] hover:bg-[rgba(255,255,255,.07)] text-[var(--text)] text-xs font-black flex items-center gap-2 border border-[rgba(255,255,255,.10)]"
                 >
                   <LogOut size={16} /> Salir
                 </button>
@@ -3264,17 +3264,17 @@ export default function App() {
             </div>
 
             <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="border border-slate-200 rounded-3xl p-5">
-                <div className="font-black text-slate-900 mb-2">Idea base</div>
+              <div className="border border-[var(--border)] rounded-3xl p-5 bg-[rgba(255,255,255,.02)]">
+                <div className="font-black text-[var(--text)] mb-2">Idea base</div>
                 <textarea
                   value={rsIdea}
                   onChange={(e) => setRsIdea(e.target.value)}
                   placeholder="Ej: Seguro de auto para jóvenes, asistencia 24/7 y descuento por buen conductor..."
-                  className="w-full h-40 px-4 py-3 border border-slate-300 rounded-2xl outline-none resize-none"
+                  className="w-full h-40 px-4 py-3 border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.04)] text-[var(--text)] placeholder:text-[var(--muted)] rounded-2xl outline-none resize-none focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                 />
 
                 <div className="mt-4">
-                  <div className="font-black text-slate-900 mb-2">Avatar</div>
+                  <div className="font-black text-[var(--text)] mb-2">Avatar</div>
                   <div className="flex flex-wrap gap-2">
                     {["auto", "vida", "hogar", "comercio"].map((k) => (
                       <button
@@ -3284,8 +3284,8 @@ export default function App() {
                         className={
                           "px-4 py-2 rounded-2xl text-xs font-black border " +
                           (rsAvatar === k
-                            ? "bg-blue-600 text-white border-blue-700"
-                            : "bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200")
+                            ? "bg-[var(--primary)] text-[#071018] border-[rgba(63,209,255,.35)]"
+                            : "bg-[rgba(255,255,255,.04)] hover:bg-[rgba(255,255,255,.07)] text-[var(--text)] border-[rgba(255,255,255,.10)]")
                         }
                       >
                         {k.toUpperCase()}
@@ -3299,7 +3299,7 @@ export default function App() {
                     type="button"
                     onClick={enterpriseGenerateSocialScript}
                     disabled={rsLoading}
-                    className="px-5 py-3 rounded-2xl bg-blue-600 text-white text-xs font-black hover:bg-blue-700 flex items-center gap-2 disabled:opacity-60"
+                    className="px-5 py-3 rounded-2xl bg-[var(--primary)] text-[#071018] text-xs font-black hover:bg-[var(--primaryHover)] flex items-center gap-2 disabled:opacity-60"
                   >
                     {rsLoading ? <Loader2 className="animate-spin" size={16} /> : <Send size={16} />}
                     Generar guión
@@ -3307,13 +3307,13 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="border border-slate-200 rounded-3xl p-5">
+              <div className="border border-[var(--border)] rounded-3xl p-5 bg-[rgba(255,255,255,.02)]">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="font-black text-slate-900">Guión final</div>
+                  <div className="font-black text-[var(--text)]">Guión final</div>
                   <button
                     type="button"
                     onClick={() => copyToClipboard(rsScript)}
-                    className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-black flex items-center gap-2"
+                    className="px-3 py-2 rounded-xl bg-[rgba(255,255,255,.04)] hover:bg-[rgba(255,255,255,.07)] text-[var(--text)] text-[11px] font-black flex items-center gap-2 border border-[rgba(255,255,255,.10)]"
                     disabled={!String(rsScript || "").trim()}
                   >
                     <Copy size={14} /> Copiar
@@ -3324,17 +3324,17 @@ export default function App() {
                   value={rsScript}
                   onChange={(e) => setRsScript(e.target.value)}
                   placeholder="Acá aparece el guión (HOOK / CUERPO / CTA)..."
-                  className="w-full h-56 px-4 py-3 border border-slate-300 rounded-2xl outline-none resize-none"
+                  className="w-full h-56 px-4 py-3 border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.04)] text-[var(--text)] placeholder:text-[var(--muted)] rounded-2xl outline-none resize-none focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                 />
 
-                <div className="mt-3 text-[11px] text-slate-500">Tip: podés editar el texto antes de copiar.</div>
+                <div className="mt-3 text-[11px] text-[var(--muted)]">Tip: podés editar el texto antes de copiar.</div>
 
                 <div className="mt-4 flex flex-wrap gap-3">
                   <button
                     type="button"
                     onClick={enterpriseCreateVideoWithAvatar}
                     disabled={capCreating || !String(rsScript || "").trim()}
-                    className="px-5 py-3 rounded-2xl bg-slate-900 text-white text-xs font-black hover:bg-black flex items-center gap-2 disabled:opacity-60"
+                    className="px-5 py-3 rounded-2xl bg-[rgba(255,255,255,.06)] text-[var(--text)] text-xs font-black hover:bg-[rgba(255,255,255,.09)] flex items-center gap-2 disabled:opacity-60 border border-[rgba(255,255,255,.12)]"
                   >
                     {capCreating ? <Loader2 className="animate-spin" size={16} /> : <Sparkles size={16} />}
                     Crear video con avatar
@@ -3344,7 +3344,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={enterpriseRefreshCaptionsOperation}
-                      className="px-4 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-black flex items-center gap-2"
+                      className="px-4 py-3 rounded-2xl bg-[rgba(255,255,255,.04)] hover:bg-[rgba(255,255,255,.07)] text-[var(--text)] text-xs font-black flex items-center gap-2 border border-[rgba(255,255,255,.10)]"
                     >
                       <RefreshCcw size={16} /> Actualizar
                     </button>
@@ -3352,13 +3352,13 @@ export default function App() {
                 </div>
 
                 {capOpId ? (
-                  <div className="mt-4 border border-slate-200 rounded-2xl p-4 bg-slate-50">
-                    <div className="text-xs font-black text-slate-700">Video (Captions)</div>
-                    <div className="mt-1 text-[11px] text-slate-500">
-                      Operación: <span className="font-black text-slate-700">{capOpId}</span>
+                  <div className="mt-4 border border-[var(--border)] rounded-2xl p-4 bg-[rgba(255,255,255,.03)]">
+                    <div className="text-xs font-black text-[var(--text)]">Video (Captions)</div>
+                    <div className="mt-1 text-[11px] text-[var(--muted)]">
+                      Operación: <span className="font-black text-[var(--text)]">{capOpId}</span>
                       {capStatusRow?.status ? (
                         <>
-                          {" "}— Estado: <span className="font-black text-slate-700">{String(capStatusRow.status)}</span>
+                          {" "}— Estado: <span className="font-black text-[var(--text)]">{String(capStatusRow.status)}</span>
                         </>
                       ) : null}
                     </div>
@@ -3368,19 +3368,19 @@ export default function App() {
                         <video
                           src={capVideoUrl}
                           controls
-                          className="w-full rounded-2xl border border-slate-200 bg-white"
+                          className="w-full rounded-2xl border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.04)]"
                         />
                         <a
                           href={capVideoUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white border border-slate-200 hover:bg-slate-50 text-xs font-black text-slate-800"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-[rgba(255,255,255,.04)] border border-[rgba(255,255,255,.12)] hover:bg-[rgba(255,255,255,.07)] text-xs font-black text-[var(--text)]"
                         >
                           <Download size={16} /> Descargar
                         </a>
                       </div>
                     ) : (
-                      <div className="mt-3 text-[11px] text-slate-500">
+                      <div className="mt-3 text-[11px] text-[var(--muted)]">
                         {capCreating
                           ? (() => {
                               const st = String(capStatusRow?.last_payload?.state || "").trim();
@@ -3417,7 +3417,7 @@ export default function App() {
   /* ================== CLIENTES PORTAL ================== */
   if (rootView === "clientes") {
     return (
-      <div className="min-h-screen bg-slate-900 p-6 font-sans">
+      <div className="min-h-screen bg-transparent p-6 font-sans">
         {Toast}
         <BackButton
           show
@@ -3430,35 +3430,35 @@ export default function App() {
 
         <div className="max-w-5xl mx-auto">
           {!clienteData ? (
-            <div className="bg-white rounded-3xl shadow-2xl border border-slate-800 p-10">
+            <div className="bg-[var(--surface)] text-[var(--text)] rounded-3xl shadow-2xl border border-[var(--border)] p-10">
               <div className="text-center mb-8">
                 <User className="mx-auto text-emerald-600 mb-4" size={52} />
-                <div className="text-3xl font-black text-slate-900">Portal Cliente</div>
-                <div className="text-slate-500 mt-2">
+                <div className="text-3xl font-black text-[var(--text)]">Portal Cliente</div>
+                <div className="text-[var(--muted)] mt-2">
                   Ingresá con tu {String(clienteDocLabel || "Documento").toLowerCase()} para ver tu seguro y descargar tu póliza.
                 </div>
               </div>
 
               <div className="max-w-md mx-auto space-y-4">
                 <div className="space-y-2">
-                  <label className="text-xs font-black text-slate-700">{clienteDocLabel}</label>
+                  <label className="text-xs font-black text-[var(--muted)]">{clienteDocLabel}</label>
                   <input
                     value={clienteDni}
                     onChange={(e) => setClienteDni(e.target.value)}
                     placeholder="Ej: 12345678"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-2xl outline-none"
+                    className="w-full px-4 py-3 border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.04)] text-[var(--text)] placeholder:text-[var(--muted)] rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-black text-slate-700">Email (opcional, recomendado)</label>
+                  <label className="text-xs font-black text-[var(--muted)]">Email (opcional, recomendado)</label>
                   <input
                     value={clienteEmail}
                     onChange={(e) => setClienteEmail(e.target.value)}
                     placeholder="El email con el que estás registrado"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-2xl outline-none"
+                    className="w-full px-4 py-3 border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.04)] text-[var(--text)] placeholder:text-[var(--muted)] rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                   />
-                  <div className="text-[11px] text-slate-400">
+                  <div className="text-[11px] text-[var(--muted)]">
                     Esto ayuda a identificar tu aseguradora si hay coincidencias.
                   </div>
                 </div>
@@ -3467,18 +3467,18 @@ export default function App() {
                   type="button"
                   onClick={clienteLookupAseguradoras}
                   disabled={!!clienteAction}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[rgba(108,255,185,.18)] hover:bg-[rgba(108,255,185,.24)] text-[var(--text)] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 border border-[rgba(108,255,185,.25)]"
                 >
                   {clienteAction === "lookup" ? <Loader2 className="animate-spin" /> : <Search size={18} />}
                   Buscar mi aseguradora
                 </button>
 
                 {clienteMatches?.length ? (
-                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-3">
-                    <div className="text-xs font-black text-slate-700">Aseguradora</div>
+                  <div className="bg-[rgba(255,255,255,.03)] border border-[var(--border)] rounded-2xl p-4 space-y-3">
+                    <div className="text-xs font-black text-[var(--text)]">Aseguradora</div>
 
                     {clienteMatches.length === 1 ? (
-                      <div className="text-sm text-slate-700">
+                      <div className="text-sm text-[var(--text)]">
                         {clienteMatches[0].aseguradora_nombre}
                       </div>
                     ) : (
@@ -3494,7 +3494,7 @@ export default function App() {
                             setClienteDocLabel(String(m.pais || "").toUpperCase() === "UY" ? "Cédula" : "DNI");
                           }
                         }}
-                        className="w-full px-4 py-3 border border-slate-300 rounded-2xl outline-none bg-white"
+                        className="w-full px-4 py-3 border border-[rgba(255,255,255,.12)] rounded-2xl outline-none bg-[rgba(255,255,255,.04)] text-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                       >
                         <option value="">Elegí tu aseguradora...</option>
                         {clienteMatches.map((m) => (
@@ -3509,20 +3509,20 @@ export default function App() {
                       type="button"
                       onClick={clienteSendCode}
                       disabled={!!clienteAction || !String(clienteSelectedAsegId || "").trim()}
-                      className="w-full bg-slate-900 hover:bg-black text-white font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2 disabled:opacity-60"
+                      className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2 disabled:opacity-60"
                     >
                       {clienteAction === "send" ? <Loader2 className="animate-spin" /> : <Mail size={18} />}
                       Enviar código
                     </button>
 
                     {clienteMaskedEmail ? (
-                      <div className="text-xs text-slate-500">
+                      <div className="text-xs text-[var(--muted)]">
                         Te lo mandamos a: <span className="font-black">{clienteMaskedEmail}</span>
                       </div>
                     ) : null}
 
                     <div className="space-y-2">
-                      <label className="text-xs font-black text-slate-700">Código</label>
+                      <label className="text-xs font-black text-[var(--muted)]">Código</label>
                       <div className="flex gap-2 justify-center">
                         {clienteCodeDigits.map((digit, idx) => (
                           <input
@@ -3555,11 +3555,11 @@ export default function App() {
                                 }
                               }
                             }}
-                            className="w-12 h-12 px-0 py-0 bg-white border-2 border-slate-300 rounded-xl outline-none text-center text-lg font-black text-slate-900"
+                            className="w-12 h-12 px-0 py-0 bg-[rgba(255,255,255,.04)] border-2 border-[rgba(255,255,255,.12)] rounded-xl outline-none text-center text-lg font-black text-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                           />
                         ))}
                       </div>
-                      <div className="text-[11px] text-slate-400 text-center">
+                      <div className="text-[11px] text-[var(--muted)] text-center">
                         Ingresá los 6 dígitos.
                       </div>
                     </div>
@@ -3568,7 +3568,7 @@ export default function App() {
                       type="button"
                       onClick={clienteVerifyAndLogin}
                       disabled={!!clienteAction || clienteCodeDigits.join("").trim().length !== 6}
-                      className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                      className="w-full bg-[rgba(108,255,185,.18)] hover:bg-[rgba(108,255,185,.24)] text-[var(--text)] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 border border-[rgba(108,255,185,.25)]"
                     >
                       {clienteAction === "verify" ? <Loader2 className="animate-spin" /> : <Shield size={18} />}
                       Verificar e ingresar
@@ -3579,12 +3579,12 @@ export default function App() {
                 <button
                   type="button"
                   onClick={openSupport}
-                  className="w-full bg-slate-900 hover:bg-black text-white font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2"
+                  className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2"
                 >
                   <MessageCircle size={18} /> Contactar soporte
                 </button>
 
-                <div className="text-xs text-slate-400 text-center mt-3">
+                <div className="text-xs text-[var(--muted)] text-center mt-3">
                   Si tu {String(clienteDocLabel || "documento").toLowerCase()} no aparece, pedile a tu aseguradora que te cargue en la cartera.
                 </div>
               </div>
@@ -3885,22 +3885,22 @@ export default function App() {
   /* ================== ASEGURADORAS AUTH ================== */
   if (rootView === "aseguradoras" && mode === "auth") {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center p-6 font-sans">
+      <div className="min-h-screen bg-transparent flex items-center justify-center p-6 font-sans">
         {Toast}
         <BackButton show onClick={() => setRootView("home")} dark />
 
-        <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-10 border border-slate-800">
+        <div className="bg-[var(--surface)] text-[var(--text)] rounded-3xl shadow-2xl w-full max-w-md p-10 border border-[var(--border)]">
           <div className="text-center mb-8">
-            <Shield className="mx-auto text-blue-600 mb-4" size={52} />
-            <h1 className="text-3xl font-black text-slate-900">SegurosPro</h1>
-            <p className="text-slate-500 text-sm mt-1">Panel Aseguradora</p>
+            <Shield className="mx-auto text-[var(--primary)] mb-4" size={52} />
+            <h1 className="text-3xl font-black text-[var(--text)]">SegurosPro</h1>
+            <p className="text-[var(--muted)] text-sm mt-1">Panel Aseguradora</p>
           </div>
 
-          <div className="flex p-1 bg-slate-100 rounded-xl mb-8">
+          <div className="flex p-1 bg-[rgba(255,255,255,.04)] border border-[rgba(255,255,255,.10)] rounded-xl mb-8">
             <button
               type="button"
               onClick={() => setAuthView("login")}
-              className="flex-1 py-3 text-sm font-black rounded-lg bg-white text-blue-600 shadow-sm"
+              className="flex-1 py-3 text-sm font-black rounded-lg bg-[rgba(255,255,255,.06)] text-[var(--primary)] shadow-sm border border-[rgba(255,255,255,.10)]"
             >
               Iniciar sesión
             </button>
@@ -3911,22 +3911,22 @@ export default function App() {
             {!emailStep && (
               <>
                 <div className="space-y-2">
-                  <label className="text-xs font-black text-slate-700">Email</label>
+                  <label className="text-xs font-black text-[var(--muted)]">Email</label>
                   <input
                     id="emailInput"
                     type="email"
                     required
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl outline-none"
+                    className="w-full px-4 py-3 bg-[rgba(255,255,255,.04)] border border-[rgba(255,255,255,.12)] rounded-xl outline-none text-[var(--text)] placeholder:text-[var(--muted)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-black text-slate-700">País</label>
+                  <label className="text-xs font-black text-[var(--muted)]">País</label>
                   <select
                     value={authPais}
                     onChange={(e) => setAuthPais(e.target.value)}
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl outline-none"
+                    className="w-full px-4 py-3 bg-[rgba(255,255,255,.04)] border border-[rgba(255,255,255,.12)] rounded-xl outline-none text-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                   >
                     <option value="AR">🇦🇷 Argentina</option>
                     <option value="UY">🇺🇾 Uruguay</option>
@@ -3960,7 +3960,7 @@ export default function App() {
                     }
                   }}
                   disabled={loading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {loading ? <Loader2 className="animate-spin" /> : <Send size={18} />}
                   Enviar código
@@ -3972,7 +3972,7 @@ export default function App() {
             {emailStep && (
               <>
                 <div className="text-center mb-4">
-                  <p className="text-sm font-black text-slate-700">Ingresa el código de {emailStep}</p>
+                  <p className="text-sm font-black text-[var(--muted)]">Ingresa el código de {emailStep}</p>
                 </div>
 
                 <div className="flex gap-2 justify-center mb-4">
@@ -4003,7 +4003,7 @@ export default function App() {
                         }
                       }}
                       id={`digit-${idx}`}
-                      className="w-12 h-12 px-0 py-0 bg-white border-2 border-slate-300 rounded-xl outline-none text-center text-lg font-black text-slate-900"
+                      className="w-12 h-12 px-0 py-0 bg-[rgba(255,255,255,.04)] border-2 border-[rgba(255,255,255,.12)] rounded-xl outline-none text-center text-lg font-black text-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--focusRing)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
                     />
                   ))}
                 </div>
@@ -4016,7 +4016,7 @@ export default function App() {
                     verifyAseguradoraEmailCode({ email: emailStep, code });
                   }}
                   disabled={loading || codeDigits.join("").length !== 6}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {loading ? <Loader2 className="animate-spin" /> : <Send size={18} />}
                   Verificar
@@ -4028,7 +4028,7 @@ export default function App() {
                     setEmailStep(null);
                     setCodeDigits(["", "", "", "", "", ""]);
                   }}
-                  className="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-2 rounded-2xl text-sm"
+                  className="w-full bg-[rgba(255,255,255,.06)] hover:bg-[rgba(255,255,255,.09)] text-[var(--text)] font-black py-2 rounded-2xl text-sm border border-[rgba(255,255,255,.12)]"
                 >
                   Volver
                 </button>
@@ -4039,7 +4039,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={openSupport}
-                className="w-full bg-slate-900 hover:bg-black text-white font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2"
+                className="w-full bg-[var(--primary)] hover:bg-[var(--primaryHover)] text-[#071018] font-black py-3 rounded-2xl shadow flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} /> Contactar soporte
               </button>
