@@ -4053,7 +4053,7 @@ export default function App() {
   if (rootView === "aseguradoras" && mode === "dashboard") {
     if (user?.rol === "admin") {
       return (
-        <div className="min-h-screen bg-slate-50 font-sans">
+        <div className="min-h-screen bg-transparent font-sans">
           {Toast}
           <BackButton
             show
